@@ -2,9 +2,11 @@ import { useEffect, useRef } from "react";
 import useGetMessages from "../../hooks/useGetMessages";
 import MessageSkeletons from "../skeletons/MessageSkeletons";
 import Message from "./Message";
+import useListenMessage from "../../hooks/useListenMessage";
 
 const Messages = () => {
   const { loading, messages } = useGetMessages();
+  useListenMessage(); // due to this hook we got the message instantly
   // to set the scroll bar at the last msg position
   const lastMessageRef = useRef();
   useEffect(() => {

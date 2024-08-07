@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-export const AuthContext = createContext();
+const AuthContext = createContext();
 
 //so to consume the value of authUser , setAuthUser
 export const useAuthContext = () => {
