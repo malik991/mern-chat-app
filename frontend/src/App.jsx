@@ -5,10 +5,11 @@ import Login from "./pages/login/login";
 import Signup from "./pages/signup/signup";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/authContext";
+import Footer from "./components/footer/Footer";
 function App() {
   const { authUser } = useAuthContext();
   return (
-    <div className="p-4 h-screen flex items-center justify-center">
+    <div className="p-4 h-screen flex flex-col items-center justify-center gap-y-5">
       <Routes>
         <Route
           path="/"
@@ -24,6 +25,7 @@ function App() {
         />
       </Routes>
       <Toaster />
+      <Footer />
     </div>
   );
 }
